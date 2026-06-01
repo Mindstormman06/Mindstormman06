@@ -1,7 +1,7 @@
 <h1 align="center">Mindstormman</h1>
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=transparent&height=300&color=gradient&text=Mindstormman" />
+  <img src="https://capsule-render.vercel.app/api?type=transparent&height=300&color=gradient&text=Mindstormman&fontColor=000000&desc=Web%20Developer%20|%20Mod%20Creator%20|%20Future%20Sysadmin" />
 </p>
 <p align="center"><i>Web Developer | Mod Creator | Future Sysadmin</i></p>
 
