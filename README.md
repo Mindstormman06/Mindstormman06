@@ -1,24 +1,50 @@
-### Active Projects
+<h1 align="center">Hi there, I'm Mind! </h1>
+<p align="center"><i>Web Developer | Mod Creator | </i></p>
 
-[**TKVSC-Team** / TKVSC](https://github.com/TKVSC-Team/totk-vscode)\
-![Issues](https://img.shields.io/github/issues/TKVSC-Team/totk-vscode?style=flat-square&color=red)
-![Issues Closed](https://img.shields.io/github/issues-closed/TKVSC-Team/totk-vscode?style=flat-square&color=green)
-![Pull Requests](https://img.shields.io/github/issues-pr/TKVSC-Team/totk-vscode?style=flat-square&color=blue)
-![Pull Requests Closed](https://img.shields.io/github/issues-pr-closed/TKVSC-Team/totk-vscode?style=flat-square&color=green)
-![Stars](https://img.shields.io/github/stars/TKVSC-Team/totk-vscode?style=flat-square&color=gold)
+---
 
-[Performing Arts Manager](https://github.com/Mindstormman06/performing-arts-manager)\
-![Issues](https://img.shields.io/github/issues/Mindstormman06/performing-arts-manager?style=flat-square&color=red)
-![Issues Closed](https://img.shields.io/github/issues-closed/Mindstormman06/performing-arts-manager?style=flat-square&color=green)
-![Pull Requests](https://img.shields.io/github/issues-pr/Mindstormman06/performing-arts-manager?style=flat-square&color=blue)
-![Pull Requests Closed](https://img.shields.io/github/issues-pr-closed/Mindstormman06/performing-arts-manager?style=flat-square&color=green)
-![Stars](https://img.shields.io/github/stars/Mindstormman06/performing-arts-manager?style=flat-square&color=gold)
+<h2 align="center">Active Projects</h2>
 
+<div align="center">
+  <table align="center">
+    <tr>
+      <td valign="top" align="center">
+        <h3><a href="https://github.com/TKVSC-Team/totk-vscode">🎮 TKVSC-Team / totk-vscode</a></h3>
+        <p><i>A Visual Studio Code extension for Tears of the Kingdom modding using React Flow and a Python bridge.</i></p>
+        <div>
+          <img src="https://img.shields.io/github/issues/TKVSC-Team/totk-vscode?style=flat-square&color=red" alt="Issues">
+          <img src="https://img.shields.io/github/issues-closed/TKVSC-Team/totk-vscode?style=flat-square&color=green" alt="Issues Closed"><br>
+          <img src="https://img.shields.io/github/issues-pr/TKVSC-Team/totk-vscode?style=flat-square&color=blue" alt="Pull Requests">
+          <img src="https://img.shields.io/github/issues-pr-closed/TKVSC-Team/totk-vscode?style=flat-square&color=green" alt="Pull Requests Closed"><br>
+          <img src="https://img.shields.io/github/stars/TKVSC-Team/totk-vscode?style=flat-square&color=gold" alt="Stars">
+        </div>
+      </td>
+      <td valign="top" align="center">
+        <h3><a href="https://github.com/Mindstormman06/performing-arts-manager">🎭 Performing Arts Manager</a></h3>
+        <p><i>A management software application built with a React frontend, Node.js backend, and MySQL database.</i></p>
+        <div>
+          <img src="https://img.shields.io/github/issues/Mindstormman06/performing-arts-manager?style=flat-square&color=red" alt="Issues">
+          <img src="https://img.shields.io/github/issues-closed/Mindstormman06/performing-arts-manager?style=flat-square&color=green" alt="Issues Closed"><br>
+          <img src="https://img.shields.io/github/issues-pr/Mindstormman06/performing-arts-manager?style=flat-square&color=blue" alt="Pull Requests">
+          <img src="https://img.shields.io/github/issues-pr-closed/Mindstormman06/performing-arts-manager?style=flat-square&color=green" alt="Pull Requests Closed"><br>
+          <img src="https://img.shields.io/github/stars/Mindstormman06/performing-arts-manager?style=flat-square&color=gold" alt="Stars">
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
 
-### Stats & Contributions
-[![GitHub Streak](https://streak-stats.demolab.com?user=Mindstormman06&theme=github-dark-blue&hide_border=true)](https://git.io/streak-stats)
+---
 
-### Latest GameBanana Submissions
+<h2 align="center">Stats & Contributions</h2>
+
+<div align="center">
+  <a href="https://git.io/streak-stats">
+    <img src="https://streak-stats.demolab.com?user=Mindstormman06&theme=github-dark-blue&hide_border=true" alt="GitHub Streak" />
+  </a>
+</div>
+
+<h2 align="center">Latest Gamebanana Submissions</h2>
 
 <!-- GAMEBANANA-START -->
 <div align="center">
