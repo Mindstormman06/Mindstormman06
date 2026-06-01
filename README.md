@@ -7,6 +7,12 @@
 ![Pull Requests Closed](https://img.shields.io/github/issues-pr-closed/TKVSC-Team/totk-vscode?style=flat-square&color=green)
 ![Stars](https://img.shields.io/github/stars/TKVSC-Team/totk-vscode?style=flat-square&color=gold)
 
+[Performing Arts Manager](https://github.com/Mindstormman06/performing-arts-manager)\
+![Issues](https://img.shields.io/github/issues/Mindstormman06/performing-arts-manager?style=flat-square&color=red)
+![Issues Closed](https://img.shields.io/github/issues-closed/Mindstormman06/performing-arts-manager?style=flat-square&color=green)
+![Pull Requests](https://img.shields.io/github/issues-pr/Mindstormman06/performing-arts-manager?style=flat-square&color=blue)
+![Pull Requests Closed](https://img.shields.io/github/issues-pr-closed/Mindstormman06/performing-arts-manager?style=flat-square&color=green)
+![Stars](https://img.shields.io/github/stars/Mindstormman06/performing-arts-manager?style=flat-square&color=gold)
 
 
 ### Stats & Contributions
