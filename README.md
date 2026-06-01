@@ -1,5 +1,7 @@
-<h1 align="center">Hi there, I'm Mind! </h1>
+<h1 align="center">Mindstormman</h1>
 <p align="center"><i>Web Developer | Mod Creator | </i></p>
+
+---
 
 <h2 align="center">Active Projects</h2>
 
