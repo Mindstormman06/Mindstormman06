@@ -1,5 +1,5 @@
 <h1 align="center">Mindstormman</h1>
-<p align="center"><i>Web Developer | Mod Creator | </i></p>
+<p align="center"><i>Web Developer | Mod Creator | Future Sysadmin</i></p>
 
 ---
 
@@ -9,7 +9,7 @@
   <table align="center">
     <tr>
       <td valign="top" align="center">
-        <h3><a href="https://github.com/TKVSC-Team/totk-vscode">🎮 TKVSC-Team / totk-vscode</a></h3>
+        <h3><a href="https://github.com/TKVSC-Team/totk-vscode">TKVSC-Team / totk-vscode</a></h3>
         <p><i>A Visual Studio Code extension for Tears of the Kingdom modding using React Flow and a Python bridge.</i></p>
         <div>
           <img src="https://img.shields.io/github/issues/TKVSC-Team/totk-vscode?style=flat-square&color=red" alt="Issues">
@@ -20,7 +20,7 @@
         </div>
       </td>
       <td valign="top" align="center">
-        <h3><a href="https://github.com/Mindstormman06/performing-arts-manager">🎭 Performing Arts Manager</a></h3>
+        <h3><a href="https://github.com/Mindstormman06/performing-arts-manager">Performing Arts Manager</a></h3>
         <p><i>A management software application built with a React frontend, Node.js backend, and MySQL database.</i></p>
         <div>
           <img src="https://img.shields.io/github/issues/Mindstormman06/performing-arts-manager?style=flat-square&color=red" alt="Issues">
