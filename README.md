@@ -15,5 +15,11 @@
 ### Latest GameBanana Submissions
 
 <!-- GAMEBANANA-START -->
+<div align="center">
 
+  <a href="https://gamebanana.com/mods/678059"><img src="https://images.gamebanana.com/img/ss/mods/6a0a18f7a5af6.jpg" alt="Leathers of Time" height="120" style="border-radius: 8px; margin: 5px; object-fit: cover;"/></a>
+  <a href="https://gamebanana.com/mods/677898"><img src="https://images.gamebanana.com/img/ss/mods/6a096affedf2f.jpg" alt="Twilight Leathers" height="120" style="border-radius: 8px; margin: 5px; object-fit: cover;"/></a>
+  <a href="https://gamebanana.com/mods/346946"><img src="https://images.gamebanana.com/img/ss/mods/61ce07f978a1a.jpg" alt="Linkle Guitar Costume (Switch Port)" height="120" style="border-radius: 8px; margin: 5px; object-fit: cover;"/></a>
+
+</div>
 <!-- GAMEBANANA-END -->
