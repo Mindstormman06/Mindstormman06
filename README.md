@@ -45,6 +45,8 @@
   </a>
 </div>
 
+---
+
 <h2 align="center">Latest Gamebanana Submissions</h2>
 
 <!-- GAMEBANANA-START -->
