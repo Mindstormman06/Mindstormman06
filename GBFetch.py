@@ -38,7 +38,7 @@ def generate_markdown(root):
     if not items:
         return "\n*No recent mods found.*\n"
 
-    md_content = "\n<div align=\"center\">\n\n"
+    md_content = "\n<div align=\"center\">\n  <table>\n    <tr>\n"
     
     for item in items[:3]:
         title_elem = item.find('title')
@@ -54,10 +54,12 @@ def generate_markdown(root):
             else:
                 img_url = "https://gamebanana.com/static/img/objects/embed_default.png"
 
-            md_content += f'  <a href="{url}"><img src="{img_url}" alt="{name}" height="120" style="border-radius: 8px; margin: 5px; object-fit: cover;"/></a>\n'
+            md_content += f'''      <td align="center" width="33%" valign="top">
+        <a href="{url}"><img src="{img_url}" alt="{name}" height="120" /></a><br>
+        <a href="{url}"><b>{name}</b></a>
+      </td>\n'''
             
-    md_content += "\n</div>\n"
-    return md_content
+    md_content += "    </tr>\n  </table>\n</div>\n"
     return md_content
 
 def update_readme(new_content):
