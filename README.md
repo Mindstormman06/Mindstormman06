@@ -4,6 +4,7 @@
 ![Issues](https://img.shields.io/github/issues/TKVSC-Team/totk-vscode?style=flat-square&color=red)
 ![Issues Closed](https://img.shields.io/github/issues-closed/TKVSC-Team/totk-vscode?style=flat-square&color=green)
 ![Pull Requests](https://img.shields.io/github/issues-pr/TKVSC-Team/totk-vscode?style=flat-square&color=blue)
+![Pull Requests Closed](https://img.shields.io/github/issues-pr-closed/TKVSC-Team/totk-vscode?style=flat-square&color=green)
 ![Stars](https://img.shields.io/github/stars/TKVSC-Team/totk-vscode?style=flat-square&color=gold)
 
 
