@@ -11,7 +11,7 @@ README_PATH = "README.md"
 START_TAG = "<!-- GAMEBANANA-START -->"
 END_TAG = "<!-- GAMEBANANA-END -->"
 
-API_URL = f"https://api.gamebanana.com/Rss/New?itemtype=Mod&userid={MEMBER_ID}"
+API_URL = f"https://api.gamebanana.com/Rss/New?itemtype=Mod,Tool&userid={MEMBER_ID}"
 
 def fetch_mods():
     print(f"Fetching latest mods for Member ID: {MEMBER_ID} via RSS...")
