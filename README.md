@@ -11,3 +11,9 @@
 
 ### Stats & Contributions
 [![GitHub Streak](https://streak-stats.demolab.com?user=Mindstormman&theme=github-dark-blue&hide_border=true)](https://git.io/streak-stats)
+
+### Latest GameBanana Submissions
+
+<!-- GAMEBANANA-START -->
+
+<!-- GAMEBANANA-END -->
