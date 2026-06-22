@@ -22,7 +22,7 @@
       </td>
       <td valign="top" align="center">
         <h3><a href="https://github.com/Mindstormman06/performing-arts-manager">Performing Arts Manager</a></h3>
-        <p><i>A management software application built with a React frontend, Node.js backend, and MySQL database.</i></p>
+        <p><i>A performing arts management system built with a React frontend, Node.js backend, and MySQL database.</i></p>
         <div>
           <img src="https://img.shields.io/github/issues/Mindstormman06/performing-arts-manager?style=flat-square&color=red" alt="Issues">
           <img src="https://img.shields.io/github/issues-closed/Mindstormman06/performing-arts-manager?style=flat-square&color=green" alt="Issues Closed"><br>
