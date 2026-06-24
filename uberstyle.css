@@ -32,20 +32,32 @@
   --font:      'Inter', 'DM Sans', system-ui, sans-serif;
 
   /* ── IMAGE CONTROLS ─────────────────────────────────────
-     Edit these to swap images on/off without touching anything else.
+     4 independent image slots — each fully separate.
      To turn an image OFF: set its -image variable to: none
      To turn it back ON: set it to: url('https://your-image-url.jpg')
   ───────────────────────────────────────────────────────── */
 
-  /* Full page background (sits behind everything) */
-  --page-bg-image:    url('https://raw.githubusercontent.com/strong-ery/strong-ery/main/18.jpg');
-  --page-bg-overlay:  rgba(13, 13, 15, 0.82);   /* darkness over the image, 0 = none, 1 = solid */
-  --page-bg-position: center;
-  --page-bg-size:     cover;
-  --page-bg-attachment: fixed;                  /* "fixed" = stays put while scrolling, "scroll" = scrolls with page */
+  /* 1) Full page background (sits behind absolutely everything) */
+  --page-bg-image:      url('https://raw.githubusercontent.com/Mindstormman06/Mindstormman06/main/photos/100.jpg');;
+  --page-bg-overlay:    rgba(13, 13, 15, 0.82);  /* darkness over the image, 0 = none, 1 = solid */
+  --page-bg-position:   center;
+  --page-bg-size:        cover;
+  --page-bg-attachment: fixed;                   /* "fixed" = stays put while scrolling, "scroll" = scrolls with page */
 
-  /* Left sidebar background (behind avatar / stats / bio column) */
-  --sidebar-bg-image:    url('https://raw.githubusercontent.com/strong-ery/strong-ery/main/146.jpg');
+  /* 2) Top banner (the bar with your username/title, #HeadlineWrapper) */
+  --banner-bg-image:    url('https://raw.githubusercontent.com/Mindstormman06/Mindstormman06/main/photos/181.jpg');
+  --banner-bg-overlay:  rgba(0, 0, 0, 0.32);
+  --banner-bg-position: center 80%;
+  --banner-bg-size:     cover;
+
+  /* 3) Stats box (#CoreStatsModule — Submissions/Subscribers/Points/etc) */
+  --stats-bg-image:     url('https://raw.githubusercontent.com/Mindstormman06/Mindstormman06/main/photos/22.jpg');
+  --stats-bg-overlay:   rgba(0, 0, 0, 0.32);
+  --stats-bg-position:  center;
+  --stats-bg-size:      cover;
+
+  /* 4) Left sidebar column (avatar / online status / bio / contact info) */
+  --sidebar-bg-image:    url('https://raw.githubusercontent.com/Mindstormman06/Mindstormman06/main/photos/170.jpg');
   --sidebar-bg-overlay:  rgba(13, 13, 15, 0.55); /* darkness over the sidebar image */
   --sidebar-bg-position: center top;
   --sidebar-bg-size:     cover;
@@ -1296,30 +1308,21 @@ legend {
   min-width: 50px !important;
 }
 
-/* ── CORE STATS: background image ────────────────────────── */
+/* ── STATS BOX: background image ─────────────────────────── */
 #CoreStatsModule {
   position: relative !important;
-  background-image: var(--page-bg-image) !important;
-  background-size: cover !important;
-  background-position: center !important;
+  background-image:
+    linear-gradient(var(--stats-bg-overlay), var(--stats-bg-overlay)),
+    var(--stats-bg-image) !important;
+  background-size: var(--stats-bg-size) !important;
+  background-position: var(--stats-bg-position) !important;
   background-repeat: no-repeat !important;
   border-radius: 0 !important;
   overflow: hidden !important;
 }
 module#CoreStatsModule,
-#CoreStatsModule,
-#CoreStatsModule::before {
+#CoreStatsModule {
   border-radius: 0 !important;
-}
-#CoreStatsModule::before {
-  content: '' !important;
-  display: block !important;
-  position: absolute !important;
-  inset: 0 !important;
-  background: rgba(0, 0, 0, 0.32) !important;
-  border-radius: 0 !important;
-  pointer-events: none !important;
-  z-index: 0 !important;
 }
 #CoreStatsModule h2,
 #CoreStatsModule .Content {
@@ -1333,24 +1336,16 @@ module#CoreStatsModule,
   align-items: flex-start !important;
 }
 
-/* ── HEADLINE WRAPPER: background image ──────────────────── */
+/* ── TOP BANNER: background image ────────────────────────── */
 #HeadlineWrapper {
   position: relative !important;
-  background-image: var(--sidebar-bg-image) !important;
-  background-size: cover !important;
-  background-position: center 80% !important;
+  background-image:
+    linear-gradient(var(--banner-bg-overlay), var(--banner-bg-overlay)),
+    var(--banner-bg-image) !important;
+  background-size: var(--banner-bg-size) !important;
+  background-position: var(--banner-bg-position) !important;
   background-repeat: no-repeat !important;
   overflow: hidden !important;
-}
-#HeadlineWrapper::before {
-  content: '' !important;
-  display: block !important;
-  position: absolute !important;
-  inset: 0 !important;
-  background: rgba(0, 0, 0, 0.32) !important;
-  border-radius: 0 !important;
-  pointer-events: none !important;
-  z-index: 0 !important;
 }
 #HeadlineWrapper > * {
   position: relative !important;
