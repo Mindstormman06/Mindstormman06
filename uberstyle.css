@@ -1,0 +1,1388 @@
+@charset "utf-8";
+
+/* ============================================================
+   SLEEK MINIMAL GAMEBANANA UBERSTYLE
+   Clean · Dark · Modern
+   Paste this into: Profile Settings > Appearance > Uberstyle
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap');
+
+@font-face {
+  font-family: 'HyliaSerif';
+  src: url('https://cdn.jsdelivr.net/gh/strong-ery/strong-ery/HyliaSerifBeta-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── ROOT VARIABLES ──────────────────────────────────────── */
+:root {
+  --bg:        #0d0d0f;
+  --surface:   #131316;
+  --surface2:  #1a1a1f;
+  --border:    rgba(255,255,255,0.07);
+  --border-hi: rgba(255,255,255,0.14);
+  --accent:    #6c63ff;
+  --accent-hi: #8b85ff;
+  --text:      #e8e8f0;
+  --muted:     #6b6b80;
+  --link:      #a09cff;
+  --radius:    10px;
+  --font:      'Inter', 'DM Sans', system-ui, sans-serif;
+
+  /* ── IMAGE CONTROLS ─────────────────────────────────────
+     Edit these to swap images on/off without touching anything else.
+     To turn an image OFF: set its -image variable to: none
+     To turn it back ON: set it to: url('https://your-image-url.jpg')
+  ───────────────────────────────────────────────────────── */
+
+  /* Full page background (sits behind everything) */
+  --page-bg-image:    url('https://raw.githubusercontent.com/strong-ery/strong-ery/main/18.jpg');
+  --page-bg-overlay:  rgba(13, 13, 15, 0.82);   /* darkness over the image, 0 = none, 1 = solid */
+  --page-bg-position: center;
+  --page-bg-size:     cover;
+  --page-bg-attachment: fixed;                  /* "fixed" = stays put while scrolling, "scroll" = scrolls with page */
+
+  /* Left sidebar background (behind avatar / stats / bio column) */
+  --sidebar-bg-image:    url('https://raw.githubusercontent.com/strong-ery/strong-ery/main/146.jpg');
+  --sidebar-bg-overlay:  rgba(13, 13, 15, 0.55); /* darkness over the sidebar image */
+  --sidebar-bg-position: center top;
+  --sidebar-bg-size:     cover;
+}
+
+/* ── GLOBAL RESET ────────────────────────────────────────── */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
+  font-family: var(--font) !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  letter-spacing: 0.01em;
+}
+
+/* ── FULL PAGE BACKGROUND IMAGE ──────────────────────────────
+   Controlled by the --page-bg-* variables above.
+   Set --page-bg-image: none;  in :root to disable entirely.
+───────────────────────────────────────────────────────────── */
+body {
+  background-image:
+    linear-gradient(var(--page-bg-overlay), var(--page-bg-overlay)),
+    var(--page-bg-image) !important;
+  background-repeat: no-repeat !important;
+  background-position: var(--page-bg-position) !important;
+  background-size: var(--page-bg-size) !important;
+  background-attachment: var(--page-bg-attachment) !important;
+}
+
+/* ── SCROLLBAR ───────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--surface2);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ── WRAPPER / LAYOUT ────────────────────────────────────── */
+#Wrapper,
+#HeaderWrapper,
+#MainContent,
+#FooterWrapper,
+#ColumnGrid,
+#ContentGrid,
+#MainContent #ColumnGrid {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* ── HEADER ──────────────────────────────────────────────── */
+#HeaderWrapper,
+#HeaderWrapper header,
+#HeaderWrapper aside,
+#MainContentHeader,
+#MainContentHeader.Fixed,
+#PrimaryNav,
+#SecondaryNavWrapper,
+#SecondaryNav {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* The actual sticky top bar */
+#HeaderWrapper header > div {
+  background: rgba(13, 13, 15, 0.96) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border) !important;
+  box-shadow: none !important;
+}
+
+/* Kill any lingering teal/green inline backgrounds on header children */
+#HeaderWrapper aside,
+#HeaderWrapper header > div #HomeLink,
+#HeaderWrapper header > div #PublicNavigatorPanes > li {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* ── NAV TABS ────────────────────────────────────────────── */
+#HeaderWrapper header > div #PublicNavigatorTabs > ul > li {
+  background: transparent !important;
+  border: none !important;
+  border-radius: var(--radius) !important;
+  padding: 8px 12px !important;
+  margin: 4px 2px !important;
+  transition: background 0.15s ease !important;
+  box-shadow: none !important;
+}
+#HeaderWrapper header > div #PublicNavigatorTabs > ul > li:hover,
+#HeaderWrapper header > div #PublicNavigatorTabs > ul > li.ActiveTab {
+  background: var(--surface2) !important;
+  border: none !important;
+}
+#HeaderWrapper header > div #PublicNavigatorTabs > ul > li span {
+  color: var(--muted) !important;
+  font-family: var(--font) !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  text-shadow: none !important;
+  transition: color 0.15s ease !important;
+}
+#HeaderWrapper header > div #PublicNavigatorTabs > ul > li:hover span,
+#HeaderWrapper header > div #PublicNavigatorTabs > ul > li.ActiveTab span {
+  color: var(--text) !important;
+}
+
+/* ── MEMBER NAV ──────────────────────────────────────────── */
+#HeaderWrapper aside #MemberNavigatorTabs > ul > li {
+  background: transparent !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  padding: 6px 10px !important;
+  margin: 4px 3px 0 0 !important;
+  transition: all 0.15s ease !important;
+  box-shadow: none !important;
+}
+#HeaderWrapper aside #MemberNavigatorTabs > ul > li:hover {
+  background: var(--surface2) !important;
+  border-color: var(--border-hi) !important;
+}
+
+/* ── SECONDARY NAV ───────────────────────────────────────── */
+#BasicSubNavigator,
+#DropdownMenuSubNavigator {
+  border: none !important;
+  background: transparent !important;
+}
+#DropdownMenuSubNavigator .sf-menu > li {
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  padding: 7px 14px !important;
+  margin: 0 4px 0 0 !important;
+  font-size: 12px !important;
+  color: var(--muted) !important;
+  text-shadow: none !important;
+  transition: all 0.15s ease !important;
+  box-shadow: none !important;
+}
+#DropdownMenuSubNavigator .sf-menu > li:hover {
+  background: var(--surface2) !important;
+  border-color: var(--border-hi) !important;
+  color: var(--text) !important;
+}
+#DropdownMenuSubNavigator .sf-menu > li > a {
+  color: inherit !important;
+  font-family: var(--font) !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+}
+#DropdownMenuSubNavigator .sf-menu > li ul {
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  margin-top: 6px !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4) !important;
+}
+#DropdownMenuSubNavigator .sf-menu > li ul > li > a {
+  color: var(--muted) !important;
+  font-size: 12px !important;
+  padding: 6px 12px !important;
+  background: transparent !important;
+  transition: color 0.12s ease !important;
+  border-bottom: none !important;
+}
+#DropdownMenuSubNavigator .sf-menu > li ul > li > a:hover {
+  color: var(--text) !important;
+  text-shadow: none !important;
+}
+
+/* ── PAGE TITLE ──────────────────────────────────────────── */
+#PageTitleWrapper,
+#PageTitleWrapper div {
+  background: transparent !important;
+  border: none !important;
+  height: auto !important;
+  padding: 24px 0 16px !important;
+}
+#PageTitleWrapper div h1 {
+  font-family: var(--font) !important;
+  font-size: 22px !important;
+  font-weight: 600 !important;
+  color: var(--text) !important;
+  text-shadow: none !important;
+  letter-spacing: -0.02em !important;
+  margin: 0 !important;
+}
+#PageTitleWrapper div h1:hover {
+  color: var(--text) !important;
+  text-shadow: none !important;
+}
+#PageTitleWrapper div h2 {
+  font-family: var(--font) !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  color: var(--muted) !important;
+  margin: 4px 0 0 !important;
+}
+
+/* ── BREADCRUMB ──────────────────────────────────────────── */
+#Breadcrumb {
+  background: transparent !important;
+  border: none !important;
+  font-size: 11px !important;
+  padding: 4px 0 !important;
+}
+#Breadcrumb ul li a,
+#TitleBreadcrumb ul li a {
+  color: var(--muted) !important;
+  font-family: var(--font) !important;
+}
+#Breadcrumb ul li a:hover,
+#TitleBreadcrumb ul li a:hover {
+  color: var(--text) !important;
+}
+
+/* ── MODULES ─────────────────────────────────────────────── */
+.Module {
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 12px !important;
+  margin-bottom: 12px !important;
+  overflow: hidden !important;
+  box-shadow: none !important;
+}
+
+.Module > h3,
+.Module > h2,
+module > h3,
+module > h2 {
+  font-family: var(--font) !important;
+  font-size: 17.5px !important;
+  font-weight: 600 !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  color: var(--text) !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid var(--border) !important;
+  padding: 12px 16px !important;
+  margin: 0 !important;
+  text-shadow: none !important;
+}
+.Module > h3:hover,
+.Module > h2:hover,
+module > h3:hover,
+module > h2:hover {
+  background: transparent !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+
+.Module > .Content {
+  background: transparent !important;
+  padding: 14px 16px !important;
+}
+.Module.Maximized > .Content {
+  background: transparent !important;
+}
+.ContentColumn > .Module,
+#FullscreenModuleWrapper > .Module {
+  background: var(--surface) !important;
+}
+.Module > .Description {
+  background: transparent !important;
+  padding: 10px 16px !important;
+  font-size: 13px !important;
+  color: var(--muted) !important;
+}
+
+/* ── LINKS ───────────────────────────────────────────────── */
+a, .Linklike {
+  color: var(--link) !important;
+  text-decoration: none !important;
+  transition: color 0.12s ease !important;
+  cursor: pointer !important;
+  font-family: var(--font) !important;
+}
+a:hover, .Linklike:hover {
+  color: var(--accent-hi) !important;
+}
+
+/* ── RICH TEXT ───────────────────────────────────────────── */
+.RichText {
+  font-family: var(--font) !important;
+  font-size: 14px !important;
+  color: var(--text) !important;
+  line-height: 1.65 !important;
+}
+
+/* ── GENERAL TEXT ELEMENTS ───────────────────────────────── */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, p, li, span {
+  font-family: var(--font) !important;
+  color: var(--text) !important;
+  text-shadow: none !important;
+}
+dt {
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  color: var(--muted) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  border-bottom: 1px solid var(--border) !important;
+  padding: 2px 0 4px !important;
+  margin: 0 !important;
+}
+dd {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: var(--text) !important;
+  font-family: var(--font) !important;
+  margin: 4px 0 12px !important;
+  padding: 0 !important;
+}
+
+/* ── KEY INFO (ID, Join Date, etc.) ──────────────────────── */
+.KeyInfo li:has(itemcount),
+.KeyInfo itemcount,
+.KeyInfo itemcount + small {
+  display: none !important;
+}
+/* Kill empty placeholder rows (GameBanana renders blank <li> Vue
+   placeholders here) so they don't leave behind a floating divider
+   line under the avatar with no content next to it. */
+.KeyInfo li:empty,
+.KeyInfo li:not(:has(*)) {
+  display: none !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.KeyInfo li {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: baseline !important;
+  gap: 8px !important;
+  padding: 4px 0 !important;
+  border-bottom: 1px solid var(--border) !important;
+  list-style: none !important;
+}
+.KeyInfo li:has(itemcount) {
+  border-bottom: none !important;
+}
+.KeyInfo li:last-child {
+  border-bottom: none !important;
+}
+/* Value: the ID number or date */
+.KeyInfo li itemcount,
+.KeyInfo li span {
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  color: var(--text) !important;
+  font-family: var(--font) !important;
+  white-space: nowrap !important;
+  order: 1 !important;
+}
+/* Label: "ID Number", "Join Date" */
+.KeyInfo li small {
+  font-size: 10px !important;
+  font-weight: 500 !important;
+  color: var(--muted) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  white-space: nowrap !important;
+  order: 2 !important;
+}
+
+/* ── BUTTONS ─────────────────────────────────────────────── */
+button, .ButtonLike {
+  font-family: var(--font) !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  background: var(--surface2) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  padding: 6px 14px !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+button span, .ButtonLike span {
+  font-family: var(--font) !important;
+  font-size: 12px !important;
+}
+button:hover, .ButtonLike:hover,
+button.Selected, .ButtonLike.Selected {
+  background: var(--surface) !important;
+  border-color: var(--border-hi) !important;
+  color: var(--text) !important;
+}
+
+/* ── INPUTS ──────────────────────────────────────────────── */
+input[type=text],
+input[type=password],
+input[type=number],
+input[type=email],
+textarea,
+select {
+  font-family: var(--font) !important;
+  font-size: 13px !important;
+  background: var(--surface2) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  padding: 8px 12px !important;
+  box-shadow: none !important;
+  transition: border-color 0.15s ease !important;
+  outline: none !important;
+}
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=number]:focus,
+input[type=email]:focus,
+textarea:focus {
+  border-color: var(--accent) !important;
+}
+input:hover, textarea:hover {
+  border-color: var(--border-hi) !important;
+}
+
+/* ── PROFILE / IDENTITY MODULE ───────────────────────────── */
+#IdentityModule .Content {
+  text-align: center !important;
+}
+
+/* ── PROFILE NAME (Hylia Serif + accent colour) ──────────── */
+#PageTitle,
+#IdentityModule .Content h1,
+#IdentityModule .Content h2,
+#IdentityModule .Content .Name,
+#ProfileHeader .Name,
+#ProfileHeader h1,
+#ProfileHeader h2,
+.ProfileHeader .MemberName,
+.ProfileHeader .Name,
+#MemberHeader .Name,
+#MemberHeader h1,
+.MemberNameHeading,
+.ProfileName {
+  font-family: 'HyliaSerif', serif !important;
+  font-weight: normal !important;
+  letter-spacing: 0.03em !important;
+  color: var(--accent-hi) !important;
+  text-shadow: none !important;
+}
+
+/* ── CORE STATS MODULE ───────────────────────────────────── */
+/* Section heading "Core Stats" — accent colour only */
+#CoreStatsModule h2 {
+  color: var(--accent-hi) !important;
+}
+
+/* Make the content a column list instead of a grid */
+#CoreStatsModule .Content {
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 0 8px !important;
+}
+
+/* Strip the boxy card look for both <a> and <div> cards */
+#CoreStatsModule .Content .Card.Stack {
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid var(--border) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 7px 4px !important;
+  text-decoration: none !important;
+  transition: background 0.15s ease !important;
+}
+#CoreStatsModule .Content .Card.Stack:hover {
+  background: var(--surface2) !important;
+  border-radius: var(--radius) !important;
+}
+#CoreStatsModule .Content .Card.Stack:last-child {
+  border-bottom: none !important;
+}
+
+/* The big number — itemcount or span */
+#CoreStatsModule .Content .Card.Stack itemcount,
+#CoreStatsModule .Content .Card.Stack > span {
+  font-family: var(--font) !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: var(--text) !important;
+  min-width: 40px !important;
+  text-align: right !important;
+}
+
+/* Icon + label cluster */
+#CoreStatsModule .Content .Card.Stack .Cluster {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 5px !important;
+}
+#CoreStatsModule .Content .Card.Stack .Cluster small {
+  font-size: 11px !important;
+  color: var(--muted) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  font-weight: 500 !important;
+}
+#CoreStatsModule .Content .Card.Stack .Cluster spriteicon {
+  opacity: 0.5 !important;
+  width: 14px !important;
+  height: 14px !important;
+}
+
+/* ── AVATARS ─────────────────────────────────────────────── */
+.Avatar img {
+  border: 2px solid var(--border) !important;
+  border-radius: 50% !important;
+  transition: border-color 0.15s ease !important;
+  padding: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+.Avatar img:hover {
+  border-color: var(--accent) !important;
+  filter: none !important;
+  transform: none !important;
+}
+
+/* ── PREVIEW IMAGES ──────────────────────────────────────── */
+img.PreviewImage {
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  transition: border-color 0.15s ease, transform 0.15s ease !important;
+}
+img.PreviewImage:hover {
+  border-color: var(--border-hi) !important;
+  filter: none !important;
+  transform: scale(0.98) !important;
+}
+
+/* ── SCREENSHOTS ─────────────────────────────────────────── */
+#ScreenshotsModule .Content div a img {
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  transition: border-color 0.15s ease, transform 0.15s ease !important;
+}
+#ScreenshotsModule .Content div a img:hover {
+  border-color: var(--border-hi) !important;
+  filter: none !important;
+  transform: scale(0.98) !important;
+}
+#ScreenshotsModule .Content div a {
+  margin: 6px !important;
+}
+
+/* ── DOWNLOAD / FILES ────────────────────────────────────── */
+#FilesModule .Content ul li {
+  background: var(--surface2) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  padding: 10px 14px !important;
+  margin: 6px 0 !important;
+  font-size: 13px !important;
+  transition: border-color 0.15s ease !important;
+}
+#FilesModule .Content ul li:hover {
+  border-color: var(--border-hi) !important;
+}
+
+/* ── POSTS / COMMENTS ────────────────────────────────────── */
+.PostsListModule div.Content ul.Posts > li {
+  background: transparent !important;
+  border-top: 1px solid var(--border) !important;
+  padding: 14px 0 !important;
+  list-style: none !important;
+  white-space: normal !important;
+}
+.PostsListModule div.Content ul.Posts > li article {
+  font-family: var(--font) !important;
+  font-size: 14px !important;
+  color: var(--text) !important;
+  margin-top: 8px !important;
+}
+.PostsListModule div.Content ul.Posts > li .PostHeader .AvatarWrapper .Avatar img {
+  border-radius: 50% !important;
+  border: 1px solid var(--border) !important;
+  transition: border-color 0.15s ease !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+.PostsListModule div.Content ul.Posts > li .PostHeader .AvatarWrapper .Avatar img:hover {
+  border-color: var(--accent) !important;
+  filter: none !important;
+  transform: none !important;
+}
+.PostsListModule div.Content ul.Posts > li .PostHeader .PostTools > button {
+  font-size: 11px !important;
+  padding: 4px 10px !important;
+  border-radius: 8px !important;
+  background: var(--surface2) !important;
+  color: var(--muted) !important;
+  border: 1px solid var(--border) !important;
+  margin: 4px 0 4px 4px !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+.PostsListModule div.Content ul.Posts > li .PostHeader .PostTools > button:hover {
+  background: var(--surface) !important;
+  color: var(--text) !important;
+  border-color: var(--border-hi) !important;
+}
+.PostsListModule div.Content ul.Posts > li .TogglePostRepliesButton {
+  font-size: 11px !important;
+  padding: 4px 10px !important;
+  border-radius: 8px !important;
+  background: transparent !important;
+  color: var(--muted) !important;
+  border: 1px solid var(--border) !important;
+  margin: 8px 0 0 !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+  transition: all 0.15s ease !important;
+}
+.PostsListModule div.Content ul.Posts > li .TogglePostRepliesButton:hover {
+  color: var(--text) !important;
+  border-color: var(--border-hi) !important;
+}
+.PostsListModule div.Content ul.Posts > li article footer {
+  color: var(--muted) !important;
+  font-size: 11px !important;
+  margin-top: 8px !important;
+}
+.PostsListModule div.Content ul.Posts > li article .PostStamps li {
+  background: var(--surface2) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  padding: 4px 8px !important;
+  margin: 3px !important;
+  transition: border-color 0.15s ease !important;
+  cursor: pointer !important;
+  box-shadow: none !important;
+}
+.PostsListModule div.Content ul.Posts > li article .PostStamps li:hover {
+  border-color: var(--border-hi) !important;
+}
+.PostsListModule div.Content ul.Posts > li article .PostStamps li span {
+  font-size: 12px !important;
+  color: var(--muted) !important;
+  font-family: var(--font) !important;
+  text-shadow: none !important;
+  transition: color 0.12s ease !important;
+}
+.PostsListModule div.Content ul.Posts > li article .PostStamps li span:hover {
+  color: var(--text) !important;
+}
+.PostsListModule div.Content ul.Posts > li .Date,
+.PostsListModule div.Content ul.Posts > li .DateModified {
+  font-size: 11px !important;
+  color: var(--muted) !important;
+  padding: 4px 0 !important;
+  margin: 0 !important;
+}
+
+/* ── NAVIGATOR PANES ─────────────────────────────────────── */
+.NavigatorPanes > li > div {
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 12px !important;
+  border-top: none !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3) !important;
+}
+.NavigatorPanes > li h4 {
+  font-family: var(--font) !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  color: var(--muted) !important;
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 0 !important;
+  padding: 10px 14px !important;
+  text-shadow: none !important;
+  transition: color 0.12s ease !important;
+}
+.NavigatorPanes > li h4:hover {
+  color: var(--text) !important;
+  background: var(--surface) !important;
+  text-shadow: none !important;
+}
+.NavigatorPanes > li > div .Links li span {
+  font-family: var(--font) !important;
+  font-size: 13px !important;
+  color: var(--muted) !important;
+  transition: color 0.12s ease !important;
+}
+.NavigatorPanes > li > div .Links li span:hover {
+  color: var(--text) !important;
+}
+.NavigatorPanes > li > div .Column1 {
+  font-family: var(--font) !important;
+  font-size: 13px !important;
+}
+.NavigatorPanes > li > div h5 {
+  font-family: var(--font) !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  color: var(--text) !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+.NavigatorPanes > li > div h5 a,
+.NavigatorPanes > li > div h5 span {
+  font-family: var(--font) !important;
+  font-size: 12px !important;
+}
+
+/* ── GENERIC LIST PREVIEWS ───────────────────────────────── */
+div.GenericPreviewListModule li {
+  border-bottom: 1px solid var(--border) !important;
+}
+div.GenericPreviewListModule li a {
+  display: block !important;
+  margin: 8px 0 !important;
+  width: 100% !important;
+}
+
+/* ── TABS ────────────────────────────────────────────────── */
+.Aes_RealisticTabs {
+  background: none !important;
+  font-size: 0 !important;
+}
+.Aes_RealisticTabs li {
+  background: var(--surface2) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  color: var(--muted) !important;
+  padding: 7px 16px !important;
+  margin: 0 4px 8px 0 !important;
+  text-shadow: none !important;
+  transition: all 0.15s ease !important;
+  box-shadow: none !important;
+  cursor: pointer !important;
+}
+.Aes_RealisticTabs li:hover,
+.Aes_RealisticTabs .Selected {
+  background: var(--surface) !important;
+  border-color: var(--accent) !important;
+  color: var(--text) !important;
+}
+.Aes_RealisticTabs li > span {
+  font-family: var(--font) !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+}
+
+/* ── STATE LABELS / BADGES ───────────────────────────────── */
+.StateLabel {
+  font-family: var(--font) !important;
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  padding: 2px 6px !important;
+  border-radius: 5px !important;
+  background: var(--surface2) !important;
+  color: var(--muted) !important;
+  display: inline-block !important;
+  margin: 2px !important;
+}
+
+/* ── MODAL ───────────────────────────────────────────────── */
+.Modal {
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6) !important;
+  padding-top: 40px !important;
+}
+.Modal:hover {
+  border-color: var(--border-hi) !important;
+}
+.Modal .Contents > .Module > h3 {
+  font-family: var(--font) !important;
+  font-size: 11px !important;
+  color: var(--muted) !important;
+  background: none !important;
+  border: none !important;
+  text-shadow: none !important;
+}
+.Modal .Contents > .Module > h3:hover {
+  color: var(--text) !important;
+  text-shadow: none !important;
+}
+.Modal .CloseModal {
+  border-radius: 8px !important;
+  border: 1px solid var(--border) !important;
+  transition: border-color 0.15s ease !important;
+}
+.Modal .CloseModal:hover {
+  border-color: var(--border-hi) !important;
+}
+
+/* ── FOOTER ──────────────────────────────────────────────── */
+#FooterWrapper,
+#FooterWrapper footer,
+#PageFooter,
+#PageFooter > *,
+footer,
+footer > *,
+#NetworkBar,
+#SiteFooter,
+.SiteFooter,
+.FooterContent,
+.FooterWrapper,
+[id*="Footer"],
+[class*="footer"],
+[class*="Footer"] {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#FooterWrapper {
+  border-top: 1px solid var(--border) !important;
+  margin-top: 24px !important;
+}
+
+/* Footer link columns (Site / Network / Members / Legal) */
+#FooterWrapper footer,
+#FooterWrapper footer .ContentRow,
+#FooterWrapper footer .ContentRow > div,
+#PageFooter .ContentRow,
+#PageFooter .ContentRow > div,
+footer .ContentRow,
+footer .ContentRow > div {
+  font-family: var(--font) !important;
+  font-size: 12px !important;
+  color: var(--muted) !important;
+  background: transparent !important;
+}
+
+/* Footer column headings (Site, Network, Members, Legal) */
+#FooterWrapper footer h4,
+#FooterWrapper footer h3,
+#FooterWrapper footer strong,
+#PageFooter h4,
+#PageFooter h3,
+#PageFooter strong,
+footer h4,
+footer h3,
+footer strong {
+  font-family: var(--font) !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  color: var(--text) !important;
+  margin-bottom: 10px !important;
+  text-shadow: none !important;
+}
+
+/* Footer links */
+#FooterWrapper footer a,
+#PageFooter a,
+footer a {
+  font-family: var(--font) !important;
+  font-size: 12px !important;
+  color: var(--muted) !important;
+  text-decoration: none !important;
+  transition: color 0.12s ease !important;
+  display: block !important;
+  margin-bottom: 5px !important;
+}
+#FooterWrapper footer a:hover,
+#PageFooter a:hover,
+footer a:hover {
+  color: var(--text) !important;
+}
+
+/* "Site Rules" red link — neutralize it */
+#FooterWrapper footer a[href*="rules"],
+#PageFooter a[href*="rules"],
+footer a[href*="rules"] {
+  color: var(--muted) !important;
+}
+
+/* Social icons row & feedback/bugs buttons at bottom */
+#FooterWrapper footer .SocialButtons,
+#FooterWrapper footer .SocialButtons a,
+#FooterWrapper .Buttons,
+#FooterWrapper .Buttons button,
+#PageFooter .SocialButtons,
+#PageFooter .Buttons button {
+  background: transparent !important;
+  border-color: var(--border) !important;
+  color: var(--muted) !important;
+}
+
+/* Feedback / Bugs buttons */
+#FooterWrapper button,
+#PageFooter button,
+footer button {
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  color: var(--muted) !important;
+  font-family: var(--font) !important;
+  font-size: 12px !important;
+  padding: 6px 14px !important;
+  margin: 4px !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+  transition: all 0.15s ease !important;
+}
+#FooterWrapper button:hover,
+#PageFooter button:hover,
+footer button:hover {
+  background: var(--surface2) !important;
+  border-color: var(--border-hi) !important;
+  color: var(--text) !important;
+}
+
+/* "For California Residents" fine print */
+#FooterWrapper footer p,
+#PageFooter p,
+footer p {
+  font-family: var(--font) !important;
+  font-size: 11px !important;
+  color: var(--muted) !important;
+}
+
+/* ── AD MODULE DIMMING ───────────────────────────────────── */
+#AtfLeaderboardModule,
+#BtfLeaderboardModule,
+#AtfSquareBannerModule,
+#BtfSquareBannerModule {
+  background: var(--surface) !important;
+  border-radius: 10px !important;
+  opacity: 0.6 !important;
+}
+
+/* ── TABLES ──────────────────────────────────────────────── */
+table td {
+  border: 1px solid var(--border) !important;
+  padding: 7px 10px !important;
+  font-size: 13px !important;
+}
+table thead th {
+  border: 1px solid var(--border) !important;
+  font-weight: 600 !important;
+  font-size: 11px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  color: var(--muted) !important;
+  padding: 7px 10px !important;
+}
+
+/* ── PAGINATOR ───────────────────────────────────────────── */
+.Paginator {
+  background: none !important;
+  border-radius: var(--radius) !important;
+  padding: 10px 0 !important;
+  text-align: right !important;
+  font-size: 12px !important;
+}
+
+/* ── PROGRESS BAR ────────────────────────────────────────── */
+#ProgressReportModule .Content .ProgressContainer {
+  background: var(--surface2) !important;
+  border-radius: 99px !important;
+  height: 6px !important;
+  overflow: hidden !important;
+  box-shadow: none !important;
+}
+#ProgressReportModule .Content .ProgressContainer span {
+  background: var(--accent) !important;
+  border-radius: 99px !important;
+  height: 6px !important;
+  box-shadow: none !important;
+}
+
+/* ── SEARCH INPUT ────────────────────────────────────────── */
+#HeaderWrapper header > div #PublicNavigatorTabs #SearchTab {
+  background: transparent !important;
+  border-radius: var(--radius) !important;
+  border: none !important;
+  padding: 6px !important;
+  transition: none !important;
+}
+#HeaderWrapper header > div #PublicNavigatorTabs #SearchTab.ActiveTab,
+#HeaderWrapper header > div #PublicNavigatorTabs #SearchTab:hover {
+  background: var(--surface2) !important;
+}
+#HeaderWrapper header > div #PublicNavigatorTabs #SearchTab form input[type="text"] {
+  width: 180px !important;
+  font-size: 13px !important;
+  border-radius: var(--radius) !important;
+}
+
+/* ── NSFW LABEL ──────────────────────────────────────────── */
+.NsfwLabel {
+  background: rgba(255,80,80,0.1) !important;
+  color: #ff8080 !important;
+  border: 1px solid rgba(255,80,80,0.2) !important;
+  border-radius: 6px !important;
+  font-size: 11px !important;
+  padding: 2px 8px !important;
+  font-family: var(--font) !important;
+}
+.NsfwLabel:hover {
+  background: rgba(255,80,80,0.15) !important;
+  color: #ff9090 !important;
+  border-color: rgba(255,80,80,0.35) !important;
+  text-shadow: none !important;
+}
+
+/* ── RICH TEXT MEDIA ─────────────────────────────────────── */
+.RichText img,
+.RichText iframe,
+.RichText audio,
+.RichText video {
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  transform: none !important;
+  max-width: 100% !important;
+}
+
+/* ── TOOLTIPS ────────────────────────────────────────────── */
+.tooltipster-base {
+  font-family: var(--font) !important;
+}
+
+/* ── THREAD QUOTES ───────────────────────────────────────── */
+.ThreadPreview blockquote {
+  background: var(--surface2) !important;
+  border-left: 2px solid var(--accent) !important;
+  border-radius: 0 8px 8px 0 !important;
+  padding: 8px 12px !important;
+  font-size: 12px !important;
+  color: var(--muted) !important;
+}
+
+/* ── MASTER LOG ──────────────────────────────────────────── */
+#MasterLog {
+  background: var(--surface) !important;
+}
+
+/* ── CONTENT EDITABLE EDITOR ─────────────────────────────── */
+.ContentEditableEditor .InputWrapper .Editor .Toolbars div button {
+  background: var(--surface2) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 6px !important;
+  margin: 2px !important;
+  padding: 4px !important;
+  font-size: 0 !important;
+  transition: border-color 0.15s ease !important;
+}
+.ContentEditableEditor .InputWrapper .Editor .Toolbars div button:hover {
+  background: var(--surface) !important;
+  border-color: var(--border-hi) !important;
+}
+.ContentEditableEditor .InputWrapper .Editor .ViewModes .Wysiwyg .RichText {
+  background: var(--surface2) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  color: var(--text) !important;
+  font-family: var(--font) !important;
+  font-size: 14px !important;
+  transition: border-color 0.15s ease !important;
+}
+.ContentEditableEditor .InputWrapper .Editor .ViewModes .Wysiwyg .RichText:focus {
+  border-color: var(--accent) !important;
+}
+.ContentEditableEditor .InputWrapper .Editor .ViewModes .Wysiwyg .RichText:hover {
+  border-color: var(--border-hi) !important;
+  padding-bottom: 0 !important;
+}
+.ContentEditableEditor .InputWrapper .Inserters > h4 {
+  font-family: var(--font) !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  background: var(--surface2) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  color: var(--muted) !important;
+  padding: 7px 12px !important;
+  text-shadow: none !important;
+  transition: all 0.15s ease !important;
+}
+.ContentEditableEditor .InputWrapper .Inserters > h4:hover {
+  background: var(--surface) !important;
+  border-color: var(--border-hi) !important;
+  color: var(--text) !important;
+}
+
+/* ── CONTENT GRID COLUMNS ────────────────────────────────── */
+#ContentGrid row column:not(:first-child) {
+  background: transparent !important;
+}
+#ContentGrid row column:nth-child(1) module,
+#ContentGrid row column:nth-child(2) module {
+  border: none !important;
+  background: transparent !important;
+}
+
+/* ── IMPORTANT LINKS ─────────────────────────────────────── */
+#ImportantLinks li a {
+  background: var(--surface2) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  color: var(--muted) !important;
+  text-shadow: none !important;
+  margin-top: 4px !important;
+  transition: all 0.15s ease !important;
+  box-shadow: none !important;
+}
+#ImportantLinks li a:hover {
+  background: var(--surface) !important;
+  border-color: var(--border-hi) !important;
+  color: var(--text) !important;
+}
+#ImportantLinks li a span {
+  font-size: 13px !important;
+  color: inherit !important;
+}
+#ImportantLinks li a span:hover {
+  color: inherit !important;
+}
+
+/* ── SETTINGS PORTAL ─────────────────────────────────────── */
+#SettingsPortalModule ul li div a {
+  font-family: var(--font) !important;
+  font-size: 13px !important;
+  color: var(--link) !important;
+}
+#SettingsPortalModule ul li div a:hover {
+  color: var(--accent-hi) !important;
+}
+#SettingsPortalModule ul li div small {
+  font-size: 11px !important;
+  color: var(--muted) !important;
+}
+
+/* ── SUB-NAVIGATOR ───────────────────────────────────────── */
+#SubNavigator {
+  margin-right: 0 !important;
+}
+
+/* ── ONLINE INDICATOR ────────────────────────────────────── */
+.Avatar.Online .OnlineIndicator {
+  background: #4ade80 !important;
+  border-radius: 50% !important;
+}
+.Avatar.Offline .OnlineIndicator {
+  background: var(--muted) !important;
+  border-radius: 50% !important;
+  opacity: 0.4 !important;
+}
+
+/* ── FORM ELEMENTS ───────────────────────────────────────── */
+legend {
+  font-family: var(--font) !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  color: var(--muted) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  border-bottom: 1px solid var(--border) !important;
+  padding-bottom: 4px !important;
+}
+.MainForm .InputsWrapper fieldset > legend .Title {
+  font-size: 11px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+}
+.MainForm .InputsWrapper fieldset .InputHelp {
+  font-size: 12px !important;
+  color: var(--muted) !important;
+  padding: 4px 0 !important;
+}
+.MainForm .InputsWrapper .CategoryTabs li {
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  transition: border-color 0.15s ease !important;
+}
+.MainForm .InputsWrapper .CategoryTabs li:hover {
+  border-color: var(--accent) !important;
+}
+
+/* ── MODULE LOG MESSAGES ─────────────────────────────────── */
+.Module > .LogMessages {
+  background: none !important;
+  padding: 10px 16px !important;
+  text-align: center !important;
+  font-size: 12px !important;
+  color: var(--muted) !important;
+}
+
+/* ── CONTENT ROW ─────────────────────────────────────────── */
+.Content > ul > li {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  flex-direction: row !important;
+}
+
+/* ── HEADER HOME LINK ────────────────────────────────────── */
+#HeaderWrapper header > div #HomeLink {
+  padding: 10px !important;
+}
+
+/* ── HIDE EMPTY MODULES ──────────────────────────────────── */
+#PcSpecs,
+#SoftwareKit,
+#Communities,
+#GamingDevices {
+  display: none !important;
+}
+
+/* ── CORE STATS: left-align content ─────────────────────── */
+#CoreStatsModule .Content .Card.Stack {
+  justify-content: flex-start !important;
+}
+#CoreStatsModule .Content .Card.Stack itemcount,
+#CoreStatsModule .Content .Card.Stack > span {
+  text-align: left !important;
+  min-width: 50px !important;
+}
+
+/* ── CORE STATS: background image ────────────────────────── */
+#CoreStatsModule {
+  position: relative !important;
+  background-image: var(--page-bg-image) !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  border-radius: 0 !important;
+  overflow: hidden !important;
+}
+module#CoreStatsModule,
+#CoreStatsModule,
+#CoreStatsModule::before {
+  border-radius: 0 !important;
+}
+#CoreStatsModule::before {
+  content: '' !important;
+  display: block !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: rgba(0, 0, 0, 0.32) !important;
+  border-radius: 0 !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+}
+#CoreStatsModule h2,
+#CoreStatsModule .Content {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* ── CORE STATS CONTENT CLUSTER: force left align ───────── */
+#CoreStatsModule .Content.Cluster {
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+}
+
+/* ── HEADLINE WRAPPER: background image ──────────────────── */
+#HeadlineWrapper {
+  position: relative !important;
+  background-image: var(--sidebar-bg-image) !important;
+  background-size: cover !important;
+  background-position: center 80% !important;
+  background-repeat: no-repeat !important;
+  overflow: hidden !important;
+}
+#HeadlineWrapper::before {
+  content: '' !important;
+  display: block !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: rgba(0, 0, 0, 0.32) !important;
+  border-radius: 0 !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+}
+#HeadlineWrapper > * {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* ── LEFT SIDEBAR BACKGROUND IMAGE ───────────────────────────
+   This is the first column of the profile grid: avatar, online
+   status, bio, contact info, PC specs, etc. Runs down the left
+   side of the screen.
+
+   Controlled by the --sidebar-bg-* variables in :root.
+   Set --sidebar-bg-image: none;  to disable (column goes back
+   to the normal transparent/surface look).
+───────────────────────────────────────────────────────────── */
+#ContentGrid row column:nth-child(1) {
+  position: relative !important;
+  background-image:
+    linear-gradient(var(--sidebar-bg-overlay), var(--sidebar-bg-overlay)),
+    var(--sidebar-bg-image) !important;
+  background-repeat: no-repeat !important;
+  background-position: var(--sidebar-bg-position) !important;
+  background-size: var(--sidebar-bg-size) !important;
+  border-radius: var(--radius) !important;
+  overflow: hidden !important;
+}
+
+/* Make each module inside the sidebar transparent so the
+   sidebar background shows through behind the cards. Remove
+   this rule if you'd rather keep each module's own surface
+   colour on top of the image. */
+#ContentGrid row column:nth-child(1) module,
+#ContentGrid row column:nth-child(1) .Module {
+  background: transparent !important;
+}
