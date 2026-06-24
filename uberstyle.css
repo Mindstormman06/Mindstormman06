@@ -45,7 +45,7 @@
   --page-bg-attachment: fixed;                   /* "fixed" = stays put while scrolling, "scroll" = scrolls with page */
 
   /* 2) Top banner (the bar with your username/title, #HeadlineWrapper) */
-  --banner-bg-image:    url('https://raw.githubusercontent.com/Mindstormman06/Mindstormman06/main/photos/181.jpg');
+  --banner-bg-image:    url('https://raw.githubusercontent.com/Mindstormman06/Mindstormman06/main/photos/1401.jpg');
   --banner-bg-overlay:  rgba(0, 0, 0, 0.32);
   --banner-bg-position: center 80%;
   --banner-bg-size:     cover;
