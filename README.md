@@ -54,16 +54,16 @@
   <table>
     <tr>
       <td align="center" width="33%" valign="top">
+        <a href="https://gamebanana.com/tools/23192"><img src="https://images.gamebanana.com/img/ss/tools/6a404b69af544.jpg" alt="TKVSC - Splatoon 3" height="120" /></a><br>
+        <a href="https://gamebanana.com/tools/23192"><b>TKVSC - Splatoon 3</b></a>
+      </td>
+      <td align="center" width="33%" valign="top">
         <a href="https://gamebanana.com/tools/22893"><img src="https://images.gamebanana.com/img/ss/tools/6a1b996575c38.jpg" alt="Tears of the Kingdom VSCode (TKVSC)" height="120" /></a><br>
         <a href="https://gamebanana.com/tools/22893"><b>Tears of the Kingdom VSCode (TKVSC)</b></a>
       </td>
       <td align="center" width="33%" valign="top">
         <a href="https://gamebanana.com/mods/678059"><img src="https://images.gamebanana.com/img/ss/mods/6a0a18f7a5af6.jpg" alt="Leathers of Time" height="120" /></a><br>
         <a href="https://gamebanana.com/mods/678059"><b>Leathers of Time</b></a>
-      </td>
-      <td align="center" width="33%" valign="top">
-        <a href="https://gamebanana.com/mods/677898"><img src="https://images.gamebanana.com/img/ss/mods/6a096affedf2f.jpg" alt="Twilight Leathers" height="120" /></a><br>
-        <a href="https://gamebanana.com/mods/677898"><b>Twilight Leathers</b></a>
       </td>
     </tr>
   </table>
