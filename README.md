@@ -11,7 +11,7 @@
     <tr>
       <td valign="top" align="center">
         <h3><a href="https://github.com/TKVSC-Team/totk-vscode">TKVSC-Team / totk-vscode</a></h3>
-        <p><i>A Visual Studio Code extension for Tears of the Kingdom modding using React Flow and a Python bridge.</i></p>
+        <p><i>A Visual Studio Code extension for Tears of the Kingdom modding.</i></p>
         <div>
           <img src="https://img.shields.io/github/issues/TKVSC-Team/totk-vscode?style=flat-square&color=red" alt="Issues">
           <img src="https://img.shields.io/github/issues-closed/TKVSC-Team/totk-vscode?style=flat-square&color=green" alt="Issues Closed"><br>
