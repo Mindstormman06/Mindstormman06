@@ -50,5 +50,22 @@
 <h2 align="center">Latest Gamebanana Submissions</h2>
 
 <!-- GAMEBANANA-START -->
-*No recent mods found or API unreachable.*
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="33%" valign="top">
+        <a href="https://gamebanana.com/mods/711571"><img src="https://images.gamebanana.com/img/ss/mods/6a93a1753cda5.jpg" alt="Dream Home Limit++" height="120" /></a><br>
+        <a href="https://gamebanana.com/mods/711571"><b>Dream Home Limit++</b></a>
+      </td>
+      <td align="center" width="33%" valign="top">
+        <a href="https://gamebanana.com/mods/711167"><img src="https://images.gamebanana.com/img/ss/mods/6a92a6383fce9.jpg" alt="Yet Another Golden Master Sword" height="120" /></a><br>
+        <a href="https://gamebanana.com/mods/711167"><b>Yet Another Golden Master Sword</b></a>
+      </td>
+      <td align="center" width="33%" valign="top">
+        <a href="https://gamebanana.com/mods/706979"><img src="https://images.gamebanana.com/img/ss/mods/6a86b09137efc.jpg" alt="Auto Item Pickup" height="120" /></a><br>
+        <a href="https://gamebanana.com/mods/706979"><b>Auto Item Pickup</b></a>
+      </td>
+    </tr>
+  </table>
+</div>
 <!-- GAMEBANANA-END -->
