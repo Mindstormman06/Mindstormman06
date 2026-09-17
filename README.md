@@ -10,7 +10,7 @@
   <table align="center">
     <tr>
       <td valign="top" align="center">
-        <h3><a href="https://github.com/TKVSC-Team/totk-vscode">BladesawStudios / totk-vscode</a></h3>
+        <h3><a href="https://github.com/TKVSC-Team/totk-vscode">TKVSC</a></h3>
         <p><i>A Visual Studio Code extension for Tears of the Kingdom modding.</i></p>
         <div>
           <img src="https://img.shields.io/github/issues/TKVSC-Team/totk-vscode?style=flat-square&color=red" alt="Issues">
@@ -21,14 +21,14 @@
         </div>
       </td>
       <td valign="top" align="center">
-        <h3><a href="https://github.com/Mindstormman06/performing-arts-manager">Performing Arts Manager</a></h3>
-        <p><i>A performing arts management system built with a React frontend, Node.js backend, and MySQL database.</i></p>
+        <h3><a href="https://github.com/BladesawStudios/WiiXLaunch">WiiXLaunch</a></h3>
+        <p><i>Cross-platform C++ modding framework for Wii U and Nintendo Switch.</i></p>
         <div>
-          <img src="https://img.shields.io/github/issues/Mindstormman06/performing-arts-manager?style=flat-square&color=red" alt="Issues">
-          <img src="https://img.shields.io/github/issues-closed/Mindstormman06/performing-arts-manager?style=flat-square&color=green" alt="Issues Closed"><br>
-          <img src="https://img.shields.io/github/issues-pr/Mindstormman06/performing-arts-manager?style=flat-square&color=blue" alt="Pull Requests">
-          <img src="https://img.shields.io/github/issues-pr-closed/Mindstormman06/performing-arts-manager?style=flat-square&color=green" alt="Pull Requests Closed"><br>
-          <img src="https://img.shields.io/github/stars/Mindstormman06/performing-arts-manager?style=flat-square&color=gold" alt="Stars">
+          <img src="https://img.shields.io/github/issues/BladesawStudios/WiiXLaunch?style=flat-square&color=red" alt="Issues">
+          <img src="https://img.shields.io/github/issues-closed/BladesawStudios/WiiXLaunch?style=flat-square&color=green" alt="Issues Closed"><br>
+          <img src="https://img.shields.io/github/issues-pr/BladesawStudios/WiiXLaunch?style=flat-square&color=blue" alt="Pull Requests">
+          <img src="https://img.shields.io/github/issues-pr-closed/BladesawStudios/WiiXLaunch?style=flat-square&color=green" alt="Pull Requests Closed"><br>
+          <img src="https://img.shields.io/github/stars/BladesawStudios/WiiXLaunch?style=flat-square&color=gold" alt="Stars">
         </div>
       </td>
     </tr>
