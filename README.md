@@ -54,16 +54,16 @@
   <table>
     <tr>
       <td align="center" width="33%" valign="top">
+        <a href="https://gamebanana.com/mods/730676"><img src="https://images.gamebanana.com/img/ss/mods/6ad96aebd5f5e.jpg" alt="Prototype Champion's Leathers" height="120" /></a><br>
+        <a href="https://gamebanana.com/mods/730676"><b>Prototype Champion's Leathers</b></a>
+      </td>
+      <td align="center" width="33%" valign="top">
         <a href="https://gamebanana.com/mods/723861"><img src="https://images.gamebanana.com/img/ss/mods/6ac20283c7303.jpg" alt="Royal Guards Hylian Shield" height="120" /></a><br>
         <a href="https://gamebanana.com/mods/723861"><b>Royal Guards Hylian Shield</b></a>
       </td>
       <td align="center" width="33%" valign="top">
         <a href="https://gamebanana.com/mods/723805"><img src="https://images.gamebanana.com/img/ss/mods/6ac1cc0bd82d5.jpg" alt="Sellable Quest Armours" height="120" /></a><br>
         <a href="https://gamebanana.com/mods/723805"><b>Sellable Quest Armours</b></a>
-      </td>
-      <td align="center" width="33%" valign="top">
-        <a href="https://gamebanana.com/mods/711571"><img src="https://images.gamebanana.com/img/ss/mods/6a93a1753cda5.jpg" alt="Dream Home Limit++" height="120" /></a><br>
-        <a href="https://gamebanana.com/mods/711571"><b>Dream Home Limit++</b></a>
       </td>
     </tr>
   </table>
