@@ -54,16 +54,16 @@
   <table>
     <tr>
       <td align="center" width="33%" valign="top">
+        <a href="https://gamebanana.com/tools/24830"><img src="https://images.gamebanana.com/img/ss/tools/6aeeb21db94b2.jpg" alt="RESTBL Calculator" height="120" /></a><br>
+        <a href="https://gamebanana.com/tools/24830"><b>RESTBL Calculator</b></a>
+      </td>
+      <td align="center" width="33%" valign="top">
         <a href="https://gamebanana.com/tools/24818"><img src="https://images.gamebanana.com/img/ss/tools/6aed79791d682.jpg" alt="TKVSC - Ocarina of Time" height="120" /></a><br>
         <a href="https://gamebanana.com/tools/24818"><b>TKVSC - Ocarina of Time</b></a>
       </td>
       <td align="center" width="33%" valign="top">
         <a href="https://gamebanana.com/mods/730676"><img src="https://images.gamebanana.com/img/ss/mods/6ad96aebd5f5e.jpg" alt="Prototype Champion's Leathers" height="120" /></a><br>
         <a href="https://gamebanana.com/mods/730676"><b>Prototype Champion's Leathers</b></a>
-      </td>
-      <td align="center" width="33%" valign="top">
-        <a href="https://gamebanana.com/mods/723861"><img src="https://images.gamebanana.com/img/ss/mods/6ac20283c7303.jpg" alt="Royal Guards Hylian Shield" height="120" /></a><br>
-        <a href="https://gamebanana.com/mods/723861"><b>Royal Guards Hylian Shield</b></a>
       </td>
     </tr>
   </table>
